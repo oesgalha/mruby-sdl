@@ -1,0 +1,6 @@
+MRuby::GemBox.new do |conf|
+  conf.gem 'mruby-sdl-basics' do |g|
+    g.cc.flags << "`sdl2-config --cflags`"
+    g.linker.flags << "`sdl2-config --libs`"
+  end
+end
