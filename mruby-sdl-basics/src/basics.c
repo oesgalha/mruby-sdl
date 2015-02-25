@@ -20,6 +20,7 @@ mrb_mruby_sdl_basics_gem_init(mrb_state* mrb) {
   mrb_define_const(mrb, sdl_module, "INIT_JOYSTICK", mrb_fixnum_value(SDL_INIT_JOYSTICK));
   mrb_define_const(mrb, sdl_module, "INIT_HAPTIC", mrb_fixnum_value(SDL_INIT_HAPTIC));
   mrb_define_const(mrb, sdl_module, "INIT_GAMECONTROLLER", mrb_fixnum_value(SDL_INIT_GAMECONTROLLER));
+  mrb_define_const(mrb, sdl_module, "INIT_EVENTS", mrb_fixnum_value(SDL_INIT_EVENTS));
   mrb_define_const(mrb, sdl_module, "INIT_EVERYTHING", mrb_fixnum_value(SDL_INIT_EVERYTHING));
   mrb_define_const(mrb, sdl_module, "INIT_NOPARACHUTE", mrb_fixnum_value(SDL_INIT_NOPARACHUTE));
 }
