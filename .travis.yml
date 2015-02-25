@@ -6,6 +6,9 @@ before_install:
   - sudo apt-get -qq update
 install:
   - sudo apt-get -qq install rake bison git gperf
+  - curl -O http://www.libsdl.org/release/SDL2-2.0.3.tar.gz
+  - tar -xzvf SDL2-2.0.3.tar.gz
+  - (cd SDL2-2.0.3 && ./configure && make && sudo make install)
 before_script:
   - cd ../
   - git clone --branch 1.1.0 https://github.com/mruby/mruby.git
