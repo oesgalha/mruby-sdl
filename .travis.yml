@@ -9,7 +9,7 @@ install:
   - sudo apt-get -qq install rake bison git gperf libsdl2-dev
 before_script:
   - cd ../
-  - git clone --branch 1.1.0 https://github.com/mruby/mruby.git
+  - git clone --depth=1 --branch 1.1.0 https://github.com/mruby/mruby.git
   - cd mruby
   - cp -fp ../mruby-sdl/.travis_build_config.rb build_config.rb
 script:
