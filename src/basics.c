@@ -7,7 +7,7 @@
  */
 
 /*
- * int SDL_Init(Uint32 flags) binding
+ * int SDL_Init(Uint32 flags)
  * http://wiki.libsdl.org/SDL_Init?highlight=%28\bCategoryInit\b%29|%28CategoryEnum%29|%28CategoryStruct%29
  */
 static mrb_value
@@ -15,7 +15,7 @@ mrb_sdl_init(mrb_state *mrb, mrb_value self)
 {
   mrb_int flags;
   mrb_get_args(mrb, "i", &flags);
-  return mrb_fixnum_value(SDL_Init(flags));
+  return mrb_bool_value(SDL_Init(flags) == 0);
 }
 
 void
